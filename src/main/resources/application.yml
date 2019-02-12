@@ -1,0 +1,16 @@
+server:
+  port: 12019
+spring:
+  rabbitmq:
+    addresses: localhost:5672
+    username: zoolye
+    password: 123456
+    virtual-host: /zool
+    connection-timeout: 15000
+    listener:
+      simple:
+        concurrency: 5
+        max-concurrency: 10
+        acknowledge-mode: manual
+        prefetch: 1
+        auto-startup: true
